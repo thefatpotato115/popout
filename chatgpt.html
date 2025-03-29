@@ -11,9 +11,11 @@
         function openURL() {
             let url = prompt("Enter a URL:");
             if (url) {
-                window.open(url, '_blank');
+                window.open(url, '_blank','width=560,height=340,toolbar=0,menubar=0,location=0');  
+                if (window.focus) {newwindow.focus()};
             }
         }
     </script>
 </body>
 </html>
+
