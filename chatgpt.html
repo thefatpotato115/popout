@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup URL</title>
+</head>
+<body>
+    <button onclick="openURL()">Enter URL</button>
+    <script>
+        function openURL() {
+            let url = prompt("Enter a URL:");
+            if (url) {
+                window.open(url, '_blank');
+            }
+        }
+    </script>
+</body>
+</html>
