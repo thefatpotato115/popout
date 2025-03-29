@@ -1,50 +1,21 @@
-<html>
-    <body style="width:98%; height:95%; background:black" onload="update()">
-        <p align:center>
-            <iframe
-                id="clock"
-                width="95%"
-                height="95%"
-                align:center
-                frameborder="0"
-                allowfullscreen>
-            </iframe>
-        </p>
-    </body>
-    <title>
-        Clock - Custom
-    </title>
-    <link rel="icon" type="image/x-icon" href="/Clock/Potato.ico">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup URL</title>
+</head>
+<body style="width:98%; height:95%; background:black">
+    <button onclick="openURL()">Enter URL</button>
+    <script>
+        function openURL() {
+            let url = prompt("Enter a URL:");
+            if (url) {
+                window.open(url, '_blank','width=560,height=340,toolbar=0,menubar=0,location=0');  
+                if (window.focus) {newwindow.focus()};
+            }
+        }
+    </script>
+</body>
 </html>
 
-<html>
-    <body style="width:95%; height:95%; background:black;" onload="update()">
-        <button
-            style="
-                background-color:black;
-                border-color:#388e3c;
-                color:#388e3c;
-                font-size:x-large
-                "
-            onclick="
-                window.open(
-                '', 'Popout window', 'fullscreen=yes, menubar=no, titlebar=no, location=no, status=no'
-                )">
-            Pop out
-        </button>
-    </body>
-    <title>
-        Popout window
-    </title>
-</html>
-
-<script>
-    // Ask for a target time and title
-    let target = prompt("What website would you like to pop out?", "https://")
-    // Update the iframe
-    function update() {
-    const attr = document.createAttribute("src");
-    attr.value = "";
-    document.getElementById("clock").setAttributeNode(attr);
-    }
-</script>
